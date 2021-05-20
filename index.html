@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.js"></script>
+  
+
+</head>
+<body>
+    <div class="main">
+
+     <input type="text" placeholder="0" id="display"><br>
+
+     <input class="clear" type="button" value="C">
+     <input class="clc" type="button" value=".">
+     <input class="clc" type="button" value="/">
+     <input class="clc" type="button" value="*">
+     <br>
+    
+     <input class="clc" type="button" value="7">
+     <input class="clc" type="button" value="8">
+     <input class="clc" type="button" value="9">
+     <input class="clc" type="button" value="-">
+     <br>
+
+     <input class="clc" type="button" value="4">
+     <input class="clc" type="button" value="5">
+     <input class="clc" type="button" value="6">
+     <input class="clc" type="button" value="+">
+     <br>
+
+     <input class="clc" type="button" value="1">
+     <input class="clc" type="button" value="2">
+     <input class="clc" type="button" value="3">
+     <input class="finalresult" type="button" value="=">
+     <br>
+     <input class="clc" type="button" value="0">
+    </div>
+        
+    <script>
+        $(document).ready(function(){
+            $('.clc').click(function(){
+                $('#display').val($('#display').val() + $(this).val());
+            });
+            $('.clear').click(function(){
+                $('#display').val(' ');
+            })
+            $('.finalresult').click(function(){
+                $('#display').val(eval($('#display').val()));
+            })
+        })
+
+    </script>
+</body>
+</html>
